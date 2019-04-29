@@ -9,6 +9,9 @@
     "postinstall": "npm run build",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "8.11.0"
+  },
   "dependencies": {
     "uuid": "^3.3.2",
     "vue": "^2.6.6"
