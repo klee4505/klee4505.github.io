@@ -13,8 +13,10 @@
     "node": "8.11.0"
   },
   "dependencies": {
+    "sass-loader": "^7.1.0",
     "uuid": "^3.3.2",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
