@@ -22,13 +22,14 @@
                 <i class="fab fa-github"></i> Github
             </a>
         </div>
+            
         <div class="item">
-            <div class=item-background>
+            <div v-on:click="toggleVideo" class=item-background>
                 <a href="#">
-                    <img src="../../assets/pic.png" alt="Project">
+                    <img src="../../assets/snake.jpg" alt="Project">
                 </a>
             </div>
-            <a href="#" class="btn-light">
+            <a v-on:click="toggleVideo" href="#" class="btn-light">
                 <i class="fas fa-eye"></i> Project
             </a>
             <a href="#" class="btn-dark">
@@ -61,17 +62,15 @@
                 <i class="fab fa-github"></i> Github
             </a>
         </div>
-        <div class="item">
-            <div class=item-background>
-                <a href="#">
-                    <img src="../../assets/pic.png" alt="Project">
-                </a>
-            </div>
-            <a href="#" class="btn-light">
-                <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-                <i class="fab fa-github"></i> Github
+
+        <div class="video">
+
+            <video width="854" height="480" controls>
+                <source src="../../assets/snakevid.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <a v-on:click="toggleVideo" href="#" class="videobtn">
+                <i class="fas fa-window-close" style="color:#DDDDDD;"></i>
             </a>
         </div>
       </div>
@@ -85,7 +84,31 @@
 <script>
 
 export default {
-  name: "ProjectLayout"
+  name: "ProjectLayout",
+  data() {
+      return {
+        showVideo: false
+      }
+    },
+  methods: {
+        toggleVideo: function() {
+          const video = document.querySelector('.video');
+          const videobtn = document.querySelector('.videobtn');
+          if (videobtn) {
+            console.log("hi")
+          }
+          if (!this.showVideo) {
+            video.classList.add('show');
+            videobtn.classList.add('showbtn');
+
+            this.showVideo = true;
+          } else {
+            video.classList.remove('show');
+            videobtn.classList.remove('showbtn');
+            this.showVideo = false;
+          }
+        }
+    }
 };
 </script>
 
@@ -93,6 +116,7 @@ export default {
 <style lang="scss" scoped>
 @import 'config';
 @import 'menu';
+@import 'video';
 
 // Headings
 h1,

@@ -14,21 +14,26 @@
               <p>&emsp;&emsp;My hobbies include playing the guitar, singing, programming, and weight lifting.</p>
 
           </div>
-          <div class="job job-1">
+
+          <div class="work-ex">
+              <h3 class="text-secondary">My Work Experience</h3>
+          </div>
+          <div class="job job-3">
               <h3>Stevens Institute of Technology</h3>
               <h6>Research Intern (April 2015 - June 2017)</h6>
-              <p>I worked as a research assistant in the Chang Research Group, Biomodeling &amp; Biomeasurements Laboratory. There we worked with melt-electrospinning technology to construct a suitable microenvironment for stem cell research. This involved finding optimal temperature, applied voltage, jet delivery speed and polymer moleculer structure. I also learned to manage 3d printing algorithms in MakerBot using Python and Excel data.</p>
+              <p><br>I worked as a research assistant in the Chang Research Group, Biomodeling &amp; Biomeasurements Laboratory. There we worked with melt-electrospinning technology to construct a suitable microenvironment for stem cell research. This involved finding optimal temperature, applied voltage, jet delivery speed and polymer moleculer structure. I also learned to manage 3d printing algorithms in MakerBot using Python and Excel data.</p>
           </div>
           
           <div class="job job-2">
               <h3>Prestige Institute</h3>
               <h6>AP Tutor/Curriculum Project Lead (May 2017 - September 2017)</h6>
-              <p>Designed and implemented questions for SAT/ACT subject tests. Tutored students in AP chemistry, AP Physics C: Mechanics, and SAT Mathematics.</p>
+              <p><br>Designed and implemented questions for SAT/ACT subject tests. Tutored students in AP chemistry, AP Physics C: Mechanics, and SAT Mathematics.</p>
           </div>
-          <div class="job job-3">
-              <h3>Prestige Institute</h3>
-              <h6>Computer Science Tutor (May 2018 - September 2018)</h6>
-              <p>I taught AP Computer Science for five high school students. I focused on teaching concepts such as recursions, searching/sorting algorithms, and object oriented programming as well as the fundamentals of programming (taught in mostly Java and Python).</p>
+          <div class="job job-1">
+              <h3>Samsung SDS America</h3>
+              <h6>HPC (High Performance Computing) Software Development &amp; Business Intern (June 2019 - August 2019)</h6>
+              <p><br>Developed an RPA (Robotic Process Automation) program for daily and monthly asset management tasks. Read from and wrote to an excel file sheet using Javascript and Python. Reduced time spent on monthly asset management from 32 hours to 0 hours.</p>
+              <p><br>Presented a new external HPC business model and ADAS (Advanced Driving Assistance System) business model to the CEO of Samsung SDS America. Researched cutting-edge HPC technology, held discussion meetings, and created PowerPoint slides. (Both business plans approved).</p>
           </div>
       </div>
     </main>
@@ -100,6 +105,7 @@ main {
     display: grid;
     grid-template-areas:
     'bioimage bio bio'
+    'work work work'
     'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
 }
@@ -115,17 +121,25 @@ main {
     margin: 0 1.5rem 0 1.5rem;
     font-size: 1.25rem;
 }
+
+.work-ex {
+    grid-area: work;
+    text-align: center;
+    margin: 4rem 0.5rem 0 1.5rem;
+    font-size: 3rem;
+}
+
 .job-1 {
     grid-area: job1;
-    margin: 4rem 0.5rem 4rem 0;
+    margin: 1.5rem 0.5rem 4rem 0;
 }
 .job-2 {
     grid-area: job2;
-    margin: 4rem 0.5rem 4rem 0.5rem;
+    margin: 1.5rem 0.5rem 4rem 0.5rem;
 }
 .job-3 {
     grid-area: job3;
-    margin: 4rem 0 4rem 0.5rem;
+    margin: 1.5rem 0 4rem 0.5rem;
 }
 
 .job {

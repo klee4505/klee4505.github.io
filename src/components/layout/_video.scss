@@ -1,0 +1,33 @@
+
+
+video {
+    width: 100%    !important;
+    height: auto   !important;
+  }
+
+//video overlay
+.video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+}
+.videobtn {
+    position: fixed;
+    padding: 2em;
+    left: 98%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: hidden;
+
+    &.showbtn {
+        visibility: visible;
+    }
+}
