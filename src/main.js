@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 import App from './App.vue';
 import Home from './Home.vue';
 import About from './About.vue';
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
 
-Vue.use(VueRouter);
-
 Vue.config.productionTip = false
+
 const routes = [
   { path: '/', component: Home, title: 'Home'},
   { path: '/about', component: About, title: 'About Me'},
@@ -22,5 +22,5 @@ const router = new VueRouter({
 })
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(Home)
 }).$mount('#app');
